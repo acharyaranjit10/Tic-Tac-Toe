@@ -1,46 +1,57 @@
+
 * {
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #316e75;
 }
 
+/* Main container */
 .main {
     text-align: center;
 }
 
+/* Game heading */
+.heading {
+    margin-top: 2rem; /* Adjust top margin as needed */
+}
+
+/* Container for game */
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* Game board */
 .game {
-    height: 60vh;
-    width: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5vh;
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Adjust width for responsiveness */
+    gap: 1px; /* Adjust spacing between boxes */
+    background-color:cadetblue;
 }
 
+/* Individual game box */
 .box {
-    height: 18vh;
-    width: 18vh;
-    border-radius: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-    font-size: 8vh;
-    background-color: #A69DFF;
-    font-weight: bolder;
-    color: rgb(242, 235, 235);
+    border: 2px solid cadetblue;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    color: #154360;
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: rgb(2, 64, 135);
 }
 
+/* Reset button */
 .reset {
+    margin-top: 1rem; /* Adjust top margin as needed */
     padding: 1rem;
     font-size: 1.5rem;
     border-radius: 1rem;
@@ -49,6 +60,7 @@ body {
     background-color: #0b090a;
 }
 
+/* New game button */
 .newGame {
     padding: 1rem;
     font-size: 1.5rem;
@@ -58,14 +70,13 @@ body {
     background-color: #0b090a;
 }
 
+/* Winner message */
 .winner {
-
     color: #ffffc7;
     font-size: 2rem;
-
-
 }
 
+/* Hidden message */
 .msg {
     display: flex;
     flex-direction: column;
@@ -75,78 +86,38 @@ body {
     align-items: center;
 }
 
+/* Hide class */
 .hide {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Glow animation */
 .glow {
-
     color: #fff;
     text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ca770b, 0 0 40px #ca770b, 0 0 50px #ca770b, 0 0 60px #ca770b, 0 0 70px #ca770b;
     }
-
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #ca770b, 0 0 40px #ca770b, 0 0 50px #ca770b, 0 0 60px #ca770b, 0 0 70px #ca770b, 0 0 80px #ca770b;
     }
 }
 
 .glow2 {
-
     color: #fff;
     text-align: center;
-    -webkit-animation: glow2 1s ease-in-out infinite alternate;
-    -moz-animation: glow2 1s ease-in-out infinite alternate;
     animation: glow2 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow2 {
+@keyframes glow2 {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
-
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #e43d90, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
 }
-
-
-
