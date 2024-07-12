@@ -1,14 +1,12 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    scrollbar-width: none;
-    overflow-x: hidden;
-}
 
 body {
     
     background-color: #316e75;
+    margin: 0;
+    padding: 0;
+    /* scrollbar-width: none;
+    overflow-x: hidden; */
     
 }
 
@@ -16,8 +14,10 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    height: 100vh;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 70vh;
 }
 
 /* Game heading */
@@ -26,7 +26,7 @@ body {
 }
 
 /* Container for game */
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,14 +34,14 @@ body {
     height: 70vh;
     width: 100vw;
     text-align: center;
-}
+} */
 
 /* Game board */
 .game {
     display: grid;
-    grid-template-columns: repeat(3, 120px); /* Adjust width for responsiveness */
-    grid-template-rows: repeat(3, 120px); /* Adjust width for responsiveness */
-    gap: 1px; /* Adjust spacing between boxes */
+    grid-template-columns: repeat(3,auto);
+    width: 225px;
+    margin: auto;
     background-color:cadetblue;
     
 }
@@ -49,8 +49,8 @@ body {
 /* Individual game box */
 .box {
     border: 2px solid cadetblue;
-    width: 120px;
-    height: 120px;
+    width: 75px;
+    height: 75px;
     font-weight: bold;
     color: #154360;
     font-size: 3rem;
