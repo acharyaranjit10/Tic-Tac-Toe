@@ -7,12 +7,17 @@
 }
 
 body {
+    
     background-color: #316e75;
+    
 }
 
 /* Main container */
 .main {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    height: 100vh;
 }
 
 /* Game heading */
@@ -27,21 +32,25 @@ body {
     align-items: center;
     flex-direction: column;
     height: 70vh;
+    width: 100vw;
+    text-align: center;
 }
 
 /* Game board */
 .game {
     display: grid;
-    grid-template-columns: repeat(3, 100px); /* Adjust width for responsiveness */
+    grid-template-columns: repeat(3, 120px); /* Adjust width for responsiveness */
+    grid-template-rows: repeat(3, 120px); /* Adjust width for responsiveness */
     gap: 1px; /* Adjust spacing between boxes */
     background-color:cadetblue;
+    
 }
 
 /* Individual game box */
 .box {
     border: 2px solid cadetblue;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     font-weight: bold;
     color: #154360;
     font-size: 3rem;
@@ -51,23 +60,35 @@ body {
 
 /* Reset button */
 .reset {
-    margin-top: 1rem; /* Adjust top margin as needed */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    height: 50px;
+    width: 200px;
     padding: 1rem;
     font-size: 1.5rem;
     border-radius: 1rem;
     border: none;
     color: white;
     background-color: #0b090a;
+    cursor: pointer;
+
 }
 
 /* New game button */
 .newGame {
+    height: 50px;
+    width: 200px;
     padding: 1rem;
     font-size: 1.5rem;
     border-radius: 1rem;
     border: none;
     color: white;
     background-color: #0b090a;
+    cursor: pointer;
 }
 
 /* Winner message */
@@ -81,7 +102,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
